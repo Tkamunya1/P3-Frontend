@@ -1,13 +1,138 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: green;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: green;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* book previews / list */
+.book-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+  width: 2 + 'rem';
+}
+.book-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.book-preview h2 {
+  font-size: 50px;
+  color: green;
+  margin-bottom: 8px;
+}
+.book-preview h3{
+  text-decoration: none;
+}
+.book-preview a{
+  text-decoration: none;
+}
+.book-preview p{
+font-style: italic;
+font-size: large;
+}
+
+.home h1{
+  color: black;
+  font-weight: bolder;
+  size: 3 rem;
+}
+
+/* Post new book form */
+.post-book {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.post-book label {
+  text-align: left;
+  display: block;
+}
+.post-book h1 {
+  font-size: 20px;
+  color: green;
+  margin-bottom: 30px;
+}
+.post-book input, .post-book textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.post-book button {
+  background:green;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card {
+columns: 3;
+}
+
+.image-preview{
+  width: 30rem;
+  height: 30rem;
+}
+
+.post-feedback {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.post-feedback label {
+  text-align: left;
+  display: block;
+}
+.post-feedback h1 {
+  font-size: 20px;
+  color: green;
+  margin-bottom: 30px;
+}
+.post-feedback input, .post-feedbach textarea {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.post-feedback button {
+  background:green;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }
