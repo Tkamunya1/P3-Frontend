@@ -4,52 +4,44 @@ import { useHistory, Link } from "react-router-dom";
 
 const Post = () => {
     const [title, setTitle ]= useState ("") 
-    const [body, setBody ]= useState ("") 
+    const [lines, setLines ]= useState ("") 
     const [author, setAuthor ]= useState ("") 
-    const [url, setUrl ]= useState ("") 
+    const [linecount, setLinecount ]= useState ("") 
 
     const his = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const book = { title, url, body, author };
+        const poem = { title, lines, linecount, author };
     
-        fetch('https://safe-river-01894.herokuapp.com/books', {
+        fetch('https://glacial-mesa-88711.herokuapp.com/poems', {
           method: 'POST',
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(book)
+          body: JSON.stringify(poem)
         }).then(() => {
-          console.log('new book added');
+          console.log('new poem added');
           his.push('/')
         })
       }
 
     return (
-        <div className = "post-book">
-            <h1> Post a New Book </h1>
+        <div className = "post-poem">
+            <h1> Post a New Sonnet </h1>
             <form onSubmit={handleSubmit}>
-                <label> Book Title </label>
+                <label> Sonnet Title </label>
                 <input
                  type="text" 
                  required
                  value={title}
                  onChange={(e) => setTitle(e.target.value)}
                  />
-
-              <label> image-url</label>
-                <input
-                 type="img" 
-                 required
-                 value={url}
-                 onChange={(e) => setUrl(e.target.value)}
-                 />
                  
                  
-                 <label> Book Body  </label>
+                 <label> Sonnet Body  </label>
                  <textarea 
                  required
-                 value={body}
-                 onChange={(e) => setBody(e.target.value)}
+                 value={lines}
+                 onChange={(e) => setLines(e.target.value)}
                  >
                  </textarea>
                  <label> Author  </label>
@@ -59,7 +51,7 @@ const Post = () => {
                  value={author}
                  onChange={(e) => setAuthor(e.target.value)}
                  />
-                 <button>Add Book </button>
+                 <button>Add Sonnet </button>
             </form>
             </div>
      );

@@ -5,7 +5,6 @@ import Blog from "./Blog"
 import About from "./About"
 import Contact from "./Contact"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BookDetails from './BookDetails';
 
 function App() {
   return (
@@ -19,9 +18,6 @@ function App() {
             </Route>
             <Route exact path="/create">
               <Post/>
-            </Route>
-            <Route path="/books/:id">
-              <BookDetails/>
             </Route>
             
             <Route exact path="/blog">

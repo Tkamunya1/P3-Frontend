@@ -35,27 +35,34 @@
 }
 
 /* book previews / list */
-.book-preview {
+.poem-list{
+  padding-left: 5px;
+  display: flexbox;
+  
+}
+.poem-preview {
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
   width: 2 + 'rem';
+  background-color: aquamarine;
+  
 }
-.book-preview:hover {
+.poem-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
-.book-preview h2 {
+.poem-preview h2 {
   font-size: 50px;
   color: green;
   margin-bottom: 8px;
 }
-.book-preview h3{
+.poem-preview h3{
   text-decoration: none;
 }
-.book-preview a{
+.poem-preview a{
   text-decoration: none;
 }
-.book-preview p{
+.poem-preview p{
 font-style: italic;
 font-size: large;
 }
@@ -66,22 +73,22 @@ font-size: large;
   size: 3 rem;
 }
 
-/* Post new book form */
-.post-book {
+/* Post new poem form */
+.post-poem {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
 }
-.post-book label {
+.post-poem label {
   text-align: left;
   display: block;
 }
-.post-book h1 {
+.post-poem h1 {
   font-size: 20px;
   color: green;
   margin-bottom: 30px;
 }
-.post-book input, .post-book textarea {
+.post-poem input, .post-poem textarea {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -89,7 +96,7 @@ font-size: large;
   box-sizing: border-box;
   display: block;
 }
-.post-book button {
+.post-poem button {
   background:green;
   color: #fff;
   border: 0;
